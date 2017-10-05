@@ -1,0 +1,14 @@
+Qns ID,Question,Answer
+1,Company Name,vSample Pte Ltd
+2,Document Number,F-RMA-04
+3,Document Title,Risk Management Report
+4,Version No.,v1.07
+5,Product Name,Blood Glucose Meter
+6,Product No.,BGM-001
+7,Risk Mgmt Standard,EN ISO 14971:2012
+8,Purpose,"The purpose of the risk management report is to summarise the activities that have been performed by the team across the various phases of Design and Development (D&D). Risk controls are also proposed. Any residual risks present are summarised accordingly and the corresponding risk/benefit analysis performed. The overall residual risk profile is provided. Similarly to the risk management plan document, this report is reviewed as part of the design review phases for any updates required."
+9,Risk Mgmt Activities,"The following processes and its SOPs are in place to monitor information for updates into Design and/or Process Risk Management. They include Control of NC Products, CAPAs, Internal and External Audits and Feedback Management."
+10,Prepared by,John Oliver
+11,Designation (Preparer),General Manager
+12,Approved by,Con Regan
+13,Designation (Approver),CEO
