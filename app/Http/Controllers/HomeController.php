@@ -35,7 +35,7 @@ class HomeController extends Controller
 			'height' => 40,
 			'wrappingStyle' => 'infront',
 		]);
-		$header->addText($company[2].' '.$company[3], null, $headerStyle);
+		$header->addText(htmlspecialchars($company[2].' '.$company[3]), null, $headerStyle);
 		$lineStyle = ['weight' => 1.5, 'width' => 600, 'height' => 0, 'color' => 000000];
 		$header->addLine($lineStyle);
 
@@ -44,7 +44,7 @@ class HomeController extends Controller
 		$lineStyle = ['weight' => 1, 'width' => 600, 'height' => 0, 'color' => 000000];
 		$footer->addLine($lineStyle);
 		$footer->addPreserveText('Page {PAGE} of {NUMPAGES}', null, $footerStyle);
-		$footer->addText($company[4], null, $footerStyle);
+		$footer->addText(htmlspecialchars($company[4]), null, $footerStyle);
 
 		$headerStyle = ['size' => 11, 'bold' => true];
 		$paragraphStyle = ['align' => 'both', 'indent' => 0.5];
@@ -52,7 +52,7 @@ class HomeController extends Controller
 		$productTab = 'productTab';
 		$phpWord->addParagraphStyle($productTab, ['tabs' => [new PhpWord\Style\Tab('left', 6000)] ]);
 		$section->addText(
-			'Product Name: '.$company[5].'	Product No: '.$company[6], $headerStyle, $productTab
+			htmlspecialchars('Product Name: '.$company[5].'	Product No: '.$company[6]), $headerStyle, $productTab
 		);
 		$section->addTextBreak(2);
 
@@ -61,15 +61,15 @@ class HomeController extends Controller
 		$section->addTextBreak(1);
 		$section->addText('The following standard is applicable to the Risk Management Plan of Axil Scientific Pte. Ltd.:', null, $paragraphStyle);
 		$section->addTextBreak(1);
-		$section->addText($company[7], null, $paragraphStyle);
+		$section->addText(htmlspecialchars($company[7]), null, $paragraphStyle);
 		$section->addTextBreak(1);
 		$section->addListItem('PURPOSE', 0, $headerStyle, $numberStyleList);
 		$section->addTextBreak(1);
-		$section->addText($company[8], null, $paragraphStyle);
+		$section->addText(htmlspecialchars($company[8]), null, $paragraphStyle);
 		$section->addTextBreak(1);
 		$section->addListItem('RISK MANAGEMENT ACTIVITIES', 0, $headerStyle, $numberStyleList);
 		$section->addTextBreak(1);
-		$section->addText($company[9], null, $paragraphStyle);
+		$section->addText(htmlspecialchars($company[9]), null, $paragraphStyle);
 		$section->addTextBreak(1);
 		
 		$section->addText('SIGNATORY APPROVAL', $headerStyle);
@@ -89,14 +89,14 @@ class HomeController extends Controller
 		$table->addCell(1820, $cellVCenter)->addText("Date", $cellBold, $cellHCenter);
 		$table->addRow(900);
 		$table->addCell(1820)->addText("Prepared by:");
-		$table->addCell(1820)->addText($company[10], null, $cellHCenter);
-		$table->addCell(1820)->addText($company[11], null, $cellHCenter);
+		$table->addCell(1820)->addText(htmlspecialchars($company[10]), null, $cellHCenter);
+		$table->addCell(1820)->addText(htmlspecialchars($company[11]), null, $cellHCenter);
 		$table->addCell(1820);
 		$table->addCell(1820);
 		$table->addRow(900);
 		$table->addCell(1820)->addText("Approved by:");
-		$table->addCell(1820)->addText($company[12], null, $cellHCenter);
-		$table->addCell(1820)->addText($company[13], null, $cellHCenter);
+		$table->addCell(1820)->addText(htmlspecialchars($company[12]), null, $cellHCenter);
+		$table->addCell(1820)->addText(htmlspecialchars($company[13]), null, $cellHCenter);
 		$table->addCell(1820);
 		$table->addCell(1820);
 
