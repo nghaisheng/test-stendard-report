@@ -14,3 +14,4 @@
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 Route::post('/generate', ['as' => 'generate', 'uses' => 'HomeController@generate']);
+Route::get('/csv-data', ['as' => 'csvdata', 'uses' => 'HomeController@csvData']);
